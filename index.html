@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Calculate your 2-stroke premix!" />
+        <meta name="author" content="RAH" />
+        <title>2-Stroke Premix Calculator</title>
+        <meta property="og:url"                content="http://www.2strokepremix.com" />
+        <meta property="og:type"               content="website" />
+        <meta property="og:title"              content="2StrokePremix.com" />
+        <meta property="og:description"        content="Calculate your 2-stroke premix!" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+        <!-- Simple line icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- FB share button SDK -->
+        <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- Twitter -->
+        <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#page-top">Menu</a></li>
+                <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
+                <!-- <li class="sidebar-nav-item"><a href="#about">About</a></li> -->
+                <li class="sidebar-nav-item"><a href="#portfolio">Calculators</a></li>
+                <li class="sidebar-nav-item"><a href="#services">Share</a></li>
+                <!-- <li class="sidebar-nav-item"><a href="#contact">Contact</a></li> -->
+            </ul>
+        </nav>
+        <!-- Header-->
+        <header class="masthead d-flex align-items-center">
+            <!--Photo by <a href="https://unsplash.com/@andrewcoop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrew Coop</a> on <a href="https://unsplash.com/s/photos/old-tool?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            -->
+            <div class="container px-4 px-lg-5 text-center bg-light rounded-3 w-50">
+                <h1 class="mb-1">2-Stroke Premix</h1>
+                <h2 class="mb-1">Fuel Calculator</h2>
+                <h3 class="mb-5"><em>Calculate your premix fuel measurements for free!</em></h3>
+                <!-- CALCULATOR FORM -->
+                <div id="calculator">
+                    <form>
+                        <label for="ratio" class="form-label">What ratio would you like to mix at?</label> 
+                        <!-- :1 ratio should should be on the same line or create another label that display "50:1" for example underneath the ratio input-->
+                        <input id="ratio" type="number" class="form-control form-control-lg w-50 text-center mx-auto" placeholder="1 to 100 "><h4 id="ratioDisplay"> : 1</h4>
+                        <label class="form-label"> Would you like to use metric or imperial measurements? </label><br/>
+                        <input id="metric" type="radio" name="measurement" value="metric"> Litres   </input>
+                        <input id="imperial" type="radio" name="measurement" value="metric"> Gallons </input> <br/>
+                        <label for="fuelAmt" class="form-label"> How many Litres or Gallons of fuel are you mixing?</label>
+                        <input type="number" name="fuel" id="fuelAmt" placeholder="1 to 1000" class="form-control form-control-lg w-50 text-center mx-auto"/>
+                        <br/>
+                        <br/>
+                        <button type="button" class="btn btn-primary btn-lg border" id="calculate">Calculate</button>
+                        <button type="button" class="btn btn-primary btn-lg border" id="refresh">Restart</button>
+                        <hr/>
+                        <h2 id="output"></h2>
+                    </form>
+                </div>
+                <!-- <a class="btn btn-primary btn-xl" href="#about">Find Out More</a> -->
+            </div>
+        </header>
+        <!-- About
+        <section class="content-section bg-light" id="about">
+            <div class="container px-4 px-lg-5 text-center">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
+                        <p class="lead mb-5">
+                            This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
+                            <a href="https://unsplash.com/">Unsplash</a>
+                            !
+                        </p>
+                        <a class="btn btn-dark btn-xl" href="#services">What We Offer</a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Callout-->
+        <!-- <section class="callout">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mx-auto mb-5">
+                    Welcome to
+                    <em>your</em>
+                    next website!
+                </h2>
+                <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a>
+            </div>
+        </section> -->
+        <!-- Portfolio-->
+        <section class="content-section" id="portfolio">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading text-center">
+                    <h3 class="text-secondary mb-0">Calculators</h3>
+                    <h2 class="mb-5">Equipment Specific Calculators</h2>
+                </div>
+                <div class="row gx-0">
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#!">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Weed-Whacker</div>
+                                    <p class="mb-0">Calculate the premix for your 2-Stroke Weed-Whacker</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
+                            <!-- Photo by <a href="https://unsplash.com/@spongolatius?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Benjamin Wacker</a> on <a href="https://unsplash.com/s/photos/brushcutter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  -->
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#!">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Chainsaw</div>
+                                    <p class="mb-0">Calculate the premix for your 2-Stroke Chainsaw!</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
+                            <!-- Photo by <a href="https://unsplash.com/@michaelfenton?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Fenton</a> on <a href="https://unsplash.com/s/photos/chainsaw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  -->
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#!">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Dirt-Bike</div>
+                                    <p class="mb-0">Calculate the premix for your 2-Stroke Motorcycle or Scooter!</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
+                            
+  <!-- Photo by <a href="https://unsplash.com/@drpain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rudi Strydom</a> on <a href="https://unsplash.com/s/photos/dirtbike?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  -->
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#!">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Leaf-Blower</div>
+                                    <p class="mb-0">Calculate the premix for your 2-Stroke Leaf-Blower!</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
+                            <!-- Photo by <a href="https://unsplash.com/@inkyhills?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Callum Hill</a> on <a href="https://unsplash.com/s/photos/leaf-blower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to Action-->
+        <!-- <section class="content-section bg-primary text-white">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4">The buttons below are impossible to resist...</h2>
+                <a class="btn btn-xl btn-light me-4" href="#!">Click Me!</a>
+                <a class="btn btn-xl btn-dark" href="#!">Look at Me!</a>
+            </div>
+        </section> -->
+        <!-- Map-->
+       <!-- <div class="map" id="contact">
+            <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+            <br />
+            <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small>
+        </div> -->
+                <!-- Services-->
+                <section class="content-section bg-primary text-white text-center mx-auto" id="services">
+                    <div class="container px-4 px-lg-5">
+                        <div class="content-section-heading">
+                            <h3 class="text-secondary mb-0">Share!</h3>
+                            <h2 class="mb-5">Share this tool with Friends and Family</h2>
+                        </div>
+                        <div class="row gx-4 gx-lg-5">
+                            <div class="col-lg-6 col-md-6 mb-5 mb-lg-0">
+                                <span class="service-icon rounded-circle mx-auto mb-3"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.2strokepremix.com%2F&amp;src=sdkpreparse"><i class="fab fa-facebook"></a></i></span>
+                                
+                                <h4><strong>Facebook</strong></h4>
+                                
+                                <p class="text-faded mb-0">Share on Facebook!</p>
+                                <div class="fb-share-button" 
+                                data-href="https://www.2strokepremix.com" 
+                                data-layout="button_count" data-size="large">
+                                <a target="_blank" 
+                                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.2strokepremix.com%2F&amp;src=sdkpreparse" 
+                                class="fb-xfbml-parse-ignore">Share</a></div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 mb-5 mb-lg-0">
+                                <span class="service-icon rounded-circle mx-auto mb-3">
+                                    <a href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&text=This%202-Stroke%20premix%20calculator%20is%20super%20useful.%20Check%20it%20out.&url=https%3A%2F%2Fwww.2strokepremix.com" 
+                                    class="icon-twitter" 
+                                    data-size="large" 
+                                    data-text="This 2-Stroke premix calculator is super useful. Check it out." 
+                                    data-url="https://www.2strokepremix.com" data-show-count="false">
+                                        <i class="fab fa-twitter"></i>
+                                    </a></span>
+                                <h4><strong>Twitter</strong></h4>
+                                <p class="text-faded mb-0 mx-auto">Share on Twitter!</p>
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
+                                class="twitter-share-button" 
+                                data-size="large" 
+                                data-text="This 2-Stroke premix calculator is super useful. Check it out." 
+                                data-url="https://www.2strokepremix.com" 
+                                data-show-count="false">
+                                    Tweet
+                                </a>
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </div>
+                            <!-- <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                                <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-like"></i></span>
+                                <h4><strong>Favorited</strong></h4>
+                                <p class="text-faded mb-0">
+                                    Millions of users
+                                    <i class="fas fa-heart"></i>
+                                    Start Bootstrap!
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-mustache"></i></span>
+                                <h4><strong>Question</strong></h4>
+                                <p class="text-faded mb-0">I mustache you a question...</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </section>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container px-4 px-lg-5">
+                <ul class="list-inline mb-5">
+                    <!-- <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
+                    </li> -->
+                </ul>
+                <p class="text-muted small mb-0">Copyright &copy; 2Srokepremix.com 2021</p>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/calc.js"></script>
+    </body>
+</html>
