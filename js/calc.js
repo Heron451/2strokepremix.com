@@ -19,7 +19,7 @@ const metricCalculation = () => {
     }
 
     const oilInMl = fuelAmt / ratio * 1000;
-    result.innerHTML = `${oilInMl} millilitres of oil to mix ${fuelAmt} Litres of fuel at a ${ratio}:1 ratio.`;
+    result.innerHTML = `${oilInMl.roundTo(1)} millilitres of oil to mix ${fuelAmt} Litres of fuel at a ${ratio}:1 ratio.`;
 } 
 
 const imperialCalculation = () => {
