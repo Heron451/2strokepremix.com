@@ -3,14 +3,15 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Calculate your 2-stroke premix!" />
+        <meta name="description" content="Use our free premix calculator to calculate your 2-stroke fuel premix ratio! This tool can be used for chainsaws, outboard motors, weed whacker/eater, snowmobiles, motorcycles, mopeds, scooters, dirt bikes, seadoos, etc. Anything with a 2 stroke/cycle engine. Learn about fuel premix, what it is and why it is important for your engine." />
+        <meta name="keywords" content="premix calculator, premix ratio, fuel ratio, premix, fuel, gas, gasoline, petrol, engine, fuel to oil calculator, fuel ratio calculator,  fuel mix calculator, 2t, 2 stroke, 2 stroke fuel, 2 stroke premix, 2 stroke premix calculator, chainsaw, dirt bike, mx, motocross, motorcycle, moped, scooter, weed eater, weed whacker, brushcutter, edge trimmer, trimmer, ice auger, ice fishing, blower, leaf blower, snowmobile, seadoo, watercraft, personal watercraft, pit bike, outboard motor, boat, 2 stroke oil, fuel mixture calculator, premix chart, premix ratio chart">
         <meta name="author" content="RAH" />
         <title>2-Stroke Premix Calculator</title>
         <!-- OG Meta data for Facebook link details-->
         <meta property="og:url"                content="http://www.2strokepremix.com" />
         <meta property="og:type"               content="website" />
         <meta property="og:title"              content="2StrokePremix.com" />
-        <meta property="og:description"        content="Calculate your 2-stroke premix!" />
+        <meta property="og:description"        content="Calculate your 2-stroke premix with this tool or find out more about what exactly premix is!" />
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
@@ -46,21 +47,21 @@
                 <li class="sidebar-brand"><a href="#page-top">Menu</a></li>
                 <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
                 <!-- <li class="sidebar-nav-item"><a href="#about">About</a></li> -->
+                <li class="sidebar-nav-item"><a href="#premix">What is Premix?</a></li>                
                 <li class="sidebar-nav-item"><a href="#portfolio">Calculators</a></li>
                 <li class="sidebar-nav-item"><a href="#services">Share</a></li>
-                <li class="sidebar-nav-item"><a href="#page-bottom">Privacy</a></li>
-                <li class="sidebar-nav-item"><a href="#page-bottom">Terms of Use</a></li>
+                <li class="sidebar-nav-item"><a href="#page-bottom">Privacy & Terms of Use</a></li>
+                <!-- <li class="sidebar-nav-item"><a href="#page-bottom">Terms of Use</a></li> -->
                 <!-- <li class="sidebar-nav-item"><a href="#contact">Contact</a></li> -->
             </ul>
         </nav>
         <!-- Header-->
         <header class="masthead d-flex align-items-center">
-            <!--Photo by <a href="https://unsplash.com/@andrewcoop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrew Coop</a> on <a href="https://unsplash.com/s/photos/old-tool?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-            -->
+            <!--Image by <a href="https://pixabay.com/users/vacho-5445136/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2338587">Vachagan Malkhasyan</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2338587">Pixabay</a>-->
             <div class="container px-4 px-lg-5 text-center bg-light rounded-3 w-50">
                 <h1 class="mb-1">2-Stroke Premix</h1>
-                <h2 class="mb-1">Fuel Calculator</h2>
-                <h3 class="mb-5"><em>Calculate your premix fuel measurements for free!</em></h3>
+                <h2 class="mb-1">Fuel Ratio Calculator</h2>
+                <h3 class="mb-5"><em>Calculate your premix fuel ratio for free!</em></h3>
                 <!-- CALCULATOR FORM -->
                 <div id="calculator">
                     <form>
@@ -68,8 +69,8 @@
                         <!-- :1 ratio should should be on the same line or create another label that display "50:1" for example underneath the ratio input-->
                         <input id="ratio" type="number" class="form-control form-control-lg w-50 text-center mx-auto" placeholder="1 to 100 "><h4 id="ratioDisplay"> : 1</h4>
                         <label class="form-label"> Would you like to use metric or imperial measurements? </label><br/>
-                        <input id="metric" type="radio" name="measurement" value="metric"> Litres   </input>
-                        <input id="imperial" type="radio" name="measurement" value="metric"> Gallons </input> <br/>
+                        <input id="imperial" type="radio" name="measurement" value="metric"> Gallons </input>
+                        <input id="metric" type="radio" name="measurement" value="metric"> Litres   </input> <br/>
                         <label for="fuelAmt" class="form-label"> How many Litres or Gallons of fuel are you mixing?</label>
                         <input type="number" name="fuel" id="fuelAmt" placeholder="1 to 1000" class="form-control form-control-lg w-50 text-center mx-auto"/>
                         <br/>
@@ -100,17 +101,40 @@
             </div>
         </section> -->
 
+        <!-- <div class="container px-4 px-lg-5 text-center bg-light rounded-3 w-50">-->
         <!-- Callout-->
-        <!-- <section class="callout">
-            <div class="container px-4 px-lg-5 text-center">
+        <section class="callout" id="premix">
+            <!-- Photo by <a href="https://unsplash.com/@ackley5?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jeff Ackley</a> on <a href="https://unsplash.com/s/photos/dirty-oil?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   -->
+            <div class="container px-4 px-lg-5 text-center bg-light rounded-3 ">
                 <h2 class="mx-auto mb-5">
-                    Welcome to
-                    <em>your</em>
-                    next website!
+                    What is 
+                    <em>Premixed</em>
+                    fuel?
                 </h2>
-                <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a>
+                <p>
+                    Fuel premix is when you mix 2-stroke (also known as 2-cycle) engine oil with gasoline at a specific ratio. 
+                    An <b>example</b> of this would be premixing gasoline for a chainsaw at a 50:1 (50 to 1) ratio. If you had 5 litres of 
+                    gasoline you would mix 100 millilitres of 2-stroke oil into the gas to get the required 50:1 ratio! At this point you may
+                     be wondering why any of this matters.
+                </p>
+                <h3> Why is <em>Premixing</em> your fuel so important?</h3>
+                <p>
+                    Premixing your fuel for your 2-stroke engine is extremely important because this is how 2-stroke engines get their lubrication. 
+                    If you do not premix your fuel with any 2-stroke oil your engine will not last long before it seizes or melts the piston rings. Even if your engine has direct oil injection, 
+                    meaning you don't premix your oil, it may be required to premix the first tank of fuel after an engine rebuild in addition to filling the oil tank for your regular oil injection.
+                    <br/><br/>
+                    This is why you always want to make sure 
+                    you're using a high quality 2-stroke oil and to mix it at the correct ratio. If you mix it too lean, meaning not enough oil in your mixture, the engine 
+                    will not last and most likely blow up. If you mix it too rich, meaning too much oil in your mixture, the engine will probably run poorly and have problems
+                     with heavy carbon build up as well. Follow the recommended premix ratio in your owners manual and use the calculator on this website to make figuring out your 
+                     premix oil measurement easy and more importantly, accurate.
+                </p>
+                <!-- <h3> How long does premixed fuel last before it's expired?</h3> -->
+                <br/><br/>
+                <!-- <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a> -->
             </div>
-        </section> -->
+        </section>
         <!-- Portfolio-->
         <section class="content-section" id="portfolio">
             <div class="container px-4 px-lg-5">
